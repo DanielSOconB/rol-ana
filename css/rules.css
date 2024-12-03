@@ -1,0 +1,265 @@
+/* General Styles for Rules */
+.rules-banner img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Padding para el contenido general de las secciones */
+.container {
+    padding: 20px; /* Espaciado interior para todo el contenido */
+    margin: 0 auto; /* Centra el contenido */
+    max-width: 1200px; /* Limita el ancho máximo */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+/* Padding adicional para secciones individuales */
+.rules-intro, .rules-attributes {
+    padding: 40px; /* Espaciado adicional en la introducción */
+    background-color: #f8f9fa; /* Fondo claro para diferenciar */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espaciado entre secciones */
+}
+
+.rules-content {
+    padding: 30px; /* Espaciado interior */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.rules-content h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-left: 5px solid #3498db;
+    padding-left: 10px;
+}
+
+.rules-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de tabla */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que los bordes redondeados afecten a las celdas */
+}
+
+.rules-content th, .rules-content td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.rules-content th {
+    background-color: #3498db;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.rules-content td {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.rules-content tr:nth-child(even) td {
+    background-color: #ecf0f1; /* Alterna colores */
+}
+
+.rules-content tr:hover td {
+    background-color: #d6eaf8; /* Efecto hover */
+}
+
+.rules-content ul {
+    padding-left: 20px;
+    margin: 10px 0;
+    list-style: square; /* Cambia el estilo de las viñetas */
+}
+
+.rules-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 0.95em;
+    color: #2c3e50;
+}
+
+.rules-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #34495e;
+}
+
+/* Carousel Container */
+.rules-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f1;
+    padding: 20px 0;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que las imágenes salten a la siguiente línea */
+}
+
+.rules-carousel::-webkit-scrollbar {
+    height: 8px; /* Ajusta el tamaño de la barra de desplazamiento */
+}
+
+.rules-carousel::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Color de la barra */
+    border-radius: 10px;
+}
+
+.rules-carousel::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Color del fondo de la barra */
+}
+
+.carousel-container {
+    display: flex;
+    gap: 15px; /* Espaciado entre las imágenes */
+}
+
+.carousel-container img {
+    width: 200px; /* Ajusta el ancho de las imágenes */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-container img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Box Styling */
+.section-box {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.section-box h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.section-box p, .section-box ul {
+    font-size: 0.95em;
+    line-height: 1.8;
+    color: #34495e;
+}
+
+/* Buttons for Navigation */
+.cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #2c82c9;
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* RULES WORLD */
+.rules-world-details,
+.rules-world-mechanics {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rules-world-details h3,
+.rules-world-mechanics h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-left: 5px solid #3498db;
+    padding-left: 10px;
+    color: #2c3e50;
+}
+
+.rules-world-details ul,
+.rules-world-mechanics ul {
+    margin-left: 20px;
+    list-style-type: square;
+}
+
+.rules-world-mechanics h4 {
+    font-size: 1.3em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+/* Estilo general para los iconos de las secciones */
+.section-icon {
+    width: 50px; /* Tamaño reducido del icono */
+    height: 50px; /* Mantiene proporción */
+    margin-right: 10px; /* Espaciado entre el icono y el texto */
+    vertical-align: middle; /* Alinea el icono con el texto */
+}
+
+.section-icon:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    filter: brightness(1.2); /* Hace el icono un poco más brillante */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave */
+}
+
+/* TABLAS */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #3498db;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.styled-table td {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.styled-table tr:nth-child(even) td {
+    background-color: #ecf0f1;
+}
+
+.styled-table tr:hover td {
+    background-color: #d6eaf8;
+}
+

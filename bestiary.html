@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestiario</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bestiario</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="rules.html">Normas del Sistema</a></li>
+                <li><a href="bestiary.html">Bestiario</a></li>
+                <li><a href="characters.html">Personajes</a></li>
+                <li><a href="configurator.html">Configurador</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Criaturas y Enemigos</h2>
+            <div id="bestiary-content"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Creado por [Tu Nombre]</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        // Cargar datos del bestiario
+        fetch('data/bestiary.json')
+            .then(response => response.json())
+            .then(data => {
+                const content = data.map(creature => `
+                    <div>
+                        <h3>${creature.name}</h3>
+                        <p>${creature.description}</p>
+                    </div>
+                `).join("");
+                document.getElementById("bestiary-content").innerHTML = content;
+            });
+    </script>
+</body>
+</html>
