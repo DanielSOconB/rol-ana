@@ -37,7 +37,9 @@
     <!-- Introducción -->
     <section class="rules-intro">
         <div class="container">
-            <h2><img src="img/icon-world.png" alt="Mundo" class="section-icon"> Trasfondo del Mundo</h2>
+            <h1>
+                <img src="img/icon-world.png" alt="Mundo" class="section-icon"> Trasfondo del Mundo
+            </h1>
             <p>El mundo donde se desarrolla este sistema de juego parece familiar, pero está plagado de sutiles diferencias que lo hacen único. Aunque en la superficie es similar al mundo que conocemos, en su núcleo se perciben normas culturales, morales y religiosas que han tomado caminos divergentes.</p>
             <p>En este entorno, los <strong>“Elegidos”</strong> son personas con habilidades sobrenaturales limitadas que desafían la comprensión común. La sociedad los percibe como una amenaza, asociándolos con conceptos arcaicos como la brujería o los milagros. Este prejuicio ha llevado a la persecución y marginación de los Elegidos, obligándolos a vivir en las sombras o bajo identidades falsas.</p>
             <p>El conflicto principal se centra en la supervivencia de los Elegidos: ¿se adaptarán al papel de forasteros ocultos o se atreverán a luchar por cambiar las percepciones de la sociedad? Este dilema establece el tono del juego, ofreciendo infinitas oportunidades narrativas.</p>
@@ -79,80 +81,222 @@
     <!-- Atributos Básicos -->
     <section class="rules-attributes">
         <div class="container">
-            <h2>
+            <h1>
                 <img src="img/icon-attributes.png" alt="Atributos" class="section-icon">
-                Atributos Básicos
-            </h2>
-            <p>Los atributos básicos representan las capacidades fundamentales de cada personaje y son esenciales para el éxito en el juego. Cada jugador dispone de <strong>40 puntos</strong> iniciales para repartir entre los siguientes atributos, con un valor mínimo de 1 y un máximo inicial de 10.</p>
+                Mecánicas de los Atributos
+            </h1>
     
-            <div class="attributes-description">
-                <h3>Descripción de los Atributos</h3>
+            <!-- Distribución Inicial -->
+            <div class="attributes-distribution">
+                <h3>Distribución Inicial</h3>
+                <p>
+                    Al inicio del juego, cada jugador dispone de <strong>40 puntos</strong> para repartir entre los seis atributos básicos: 
+                    Fuerza (FUE), Agilidad (AGI), Resistencia (RES), Inteligencia (INT), Carisma (CAR) y Voluntad (VOL).
+                </p>
+                <p>Las reglas de distribución inicial son las siguientes:</p>
+                <ul>
+                    <li>Cada atributo debe tener al menos <strong>1 punto</strong>.</li>
+                    <li>El valor máximo inicial permitido en un atributo es <strong>10 puntos</strong>.</li>
+                </ul>
+                <h4>Ejemplo de Distribución Inicial:</h4>
                 <table class="styled-table">
                     <thead>
                         <tr>
                             <th>Atributo</th>
-                            <th>Descripción</th>
-                            <th>Ejemplo de Uso</th>
+                            <th>Puntos Asignados</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Fuerza (FUE)</strong></td>
-                            <td>Potencia física para realizar tareas que requieren esfuerzo.</td>
-                            <td>Tirar de una puerta atascada (DO 15).</td>
+                            <td>Fuerza (FUE)</td>
+                            <td>8</td>
                         </tr>
                         <tr>
-                            <td><strong>Agilidad (AGI)</strong></td>
-                            <td>Reflejos y destreza física para esquivar y moverse.</td>
-                            <td>Esquivar una flecha (DO 18).</td>
+                            <td>Agilidad (AGI)</td>
+                            <td>6</td>
                         </tr>
                         <tr>
-                            <td><strong>Resistencia (RES)</strong></td>
-                            <td>Capacidad de soportar daño físico y resistir condiciones extremas.</td>
-                            <td>Resistir un veneno débil (DO 10).</td>
+                            <td>Resistencia (RES)</td>
+                            <td>10</td>
                         </tr>
                         <tr>
-                            <td><strong>Inteligencia (INT)</strong></td>
-                            <td>Razonamiento lógico, memoria y análisis.</td>
-                            <td>Resolver un enigma antiguo (DO 20).</td>
+                            <td>Inteligencia (INT)</td>
+                            <td>7</td>
                         </tr>
                         <tr>
-                            <td><strong>Carisma (CAR)</strong></td>
-                            <td>Habilidad para persuadir, liderar y socializar.</td>
-                            <td>Convencer a un guardia de que te deje pasar (DO 15).</td>
+                            <td>Carisma (CAR)</td>
+                            <td>4</td>
                         </tr>
                         <tr>
-                            <td><strong>Voluntad (VOL)</strong></td>
-                            <td>Fortaleza mental y emocional para resistir miedos.</td>
-                            <td>Resistir un hechizo de miedo (DO 20).</td>
+                            <td>Voluntad (VOL)</td>
+                            <td>5</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
     
-            <div class="attributes-mechanics">
-                <h3>Mecánicas de los Atributos</h3>
+            <!-- Modificadores -->
+            <div class="attributes-modifiers">
+                <h3>Modificadores</h3>
+                <p>
+                    El valor de cada atributo se utiliza como <strong>bono</strong> en las tiradas relacionadas con ese atributo. 
+                    La fórmula básica es la siguiente:
+                </p>
+                <div class="formula-box">
+                    <p><strong>Resultado de la tirada (1d20) + Bono del Atributo + Bonos adicionales (habilidades, equipo, etc.)</strong></p>
+                </div>
+                <h4>Ejemplo Práctico:</h4>
+                <p>
+                    <strong>Situación:</strong> El jugador intenta abrir una puerta cerrada con fuerza bruta.<br>
+                    <strong>Atributo:</strong> Fuerza (FUE) = 8.<br>
+                    <strong>Dificultad Objetivo (DO):</strong> 15.<br>
+                    <strong>Tirada:</strong> El jugador lanza un 1d20 y obtiene un 10.<br>
+                    <strong>Cálculo final:</strong> 10 (tirada) + 8 (FUE) = 18. El personaje supera la DO y logra abrir la puerta.
+                </p>
+                <p>Los modificadores influyen en todas las acciones del juego, tanto narrativas como de combate.</p>
+            </div>
+    
+            <!-- Evolución -->
+            <div class="attributes-evolution">
+                <h3>Evolución</h3>
+                <p>
+                    Durante la campaña, los jugadores pueden invertir <strong>puntos de experiencia (PE)</strong> para mejorar sus atributos y adaptarse a los desafíos crecientes.
+                </p>
+                <h4>Reglas para Mejorar Atributos:</h4>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Valor Actual del Atributo</th>
+                            <th>Costo en PE para Incrementar +1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1–5</td>
+                            <td>5 PE</td>
+                        </tr>
+                        <tr>
+                            <td>6–8</td>
+                            <td>10 PE</td>
+                        </tr>
+                        <tr>
+                            <td>9–10</td>
+                            <td>15 PE</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Restricciones:</strong></p>
                 <ul>
-                    <li><strong>Distribución Inicial:</strong> Cada jugador dispone de 40 puntos para repartir entre los atributos.</li>
-                    <li><strong>Modificadores:</strong> El valor de cada atributo se suma como bono a las tiradas relacionadas.</li>
-                    <li><strong>Evolución:</strong> Los atributos pueden mejorarse durante la campaña mediante el uso de puntos de experiencia.</li>
+                    <li>Un atributo no puede superar el valor de <strong>15 puntos</strong> sin habilidades o efectos especiales.</li>
+                    <li>Solo se puede mejorar un atributo al final de una sesión o después de un evento significativo narrado por el Narrador.</li>
+                </ul>
+                <h4>Estrategias de Evolución:</h4>
+                <ul>
+                    <li><strong>Fortalecer atributos clave:</strong> Incrementar los atributos principales para especializar aún más al personaje.</li>
+                    <li><strong>Corregir debilidades:</strong> Usar PE para mejorar atributos bajos que han generado dificultades durante la campaña.</li>
                 </ul>
             </div>
         </div>
     </section>
     
+    
 
     <!-- Dados Usados -->
     <section class="rules-dice">
-        <div class="container section-box">
-            <h2><img src="img/icon-dice.png" alt="Dados" class="section-icon"> Dados Usados</h2>
-            <ul>
-                <li><strong>1d20 (principal):</strong> Usado para la mayoría de las acciones importantes.</li>
-                <li><strong>1d4, 1d6, 1d8, 1d10:</strong> Utilizados para daño, poderes y efectos específicos.</li>
-            </ul>
-            <p>Ejemplo: Una pistola inflige 1d8 de daño, mientras que un golpe cuerpo a cuerpo puede hacer 1d6 + FUE.</p>
+        <div class="container">
+            <h1>
+                <img src="img/icon-dice.png" alt="Dados" class="section-icon">
+                Dados Usados
+            </h1>
+            <p>En este sistema de juego, los dados son fundamentales para resolver acciones, calcular daños y determinar resultados de eventos. Cada tipo de dado tiene un propósito específico y contribuye al dinamismo de la narrativa y el combate.</p>
+    
+            <div class="dice-types">
+                <h3>Tipos de Dados y Sus Usos</h3>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Dado</th>
+                            <th>Usos Principales</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1d20 (principal)</strong></td>
+                            <td>Resolver la mayoría de las acciones importantes, como ataques, pruebas de habilidad o resistencias.</td>
+                            <td>Intentar saltar un abismo con una prueba de Agilidad (AGI).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1d4</strong></td>
+                            <td>Calcular daño de ataques débiles o efectos de poderes menores.</td>
+                            <td>Un golpe rápido con un arma ligera inflige 1d4 de daño.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1d6</strong></td>
+                            <td>Determinar daño de armas cuerpo a cuerpo estándar o efectos moderados.</td>
+                            <td>Un golpe con un garrote hace 1d6 + FUE de daño.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1d8</strong></td>
+                            <td>Calcular daño de armas a distancia, como pistolas o arcos.</td>
+                            <td>Una pistola inflige 1d8 de daño.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1d10</strong></td>
+                            <td>Usado para armas de gran impacto o efectos significativos.</td>
+                            <td>Un rifle pesado inflige 1d10 + AGI de daño.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="dice-mechanics">
+                <h3>Mecánicas de Dados</h3>
+                <p>El sistema utiliza un enfoque basado en tiradas para determinar el éxito o fracaso de una acción. Aquí tienes los pasos principales:</p>
+                <ol>
+                    <li>
+                        <strong>Establecer la Dificultad Objetivo (DO):</strong> El Narrador define la dificultad basada en el contexto de la acción.
+                        <ul>
+                            <li><strong>Fácil:</strong> DO 5 (abrir una puerta sin cerradura).</li>
+                            <li><strong>Moderada:</strong> DO 15 (esquivar un ataque básico).</li>
+                            <li><strong>Difícil:</strong> DO 20 (cruzar un puente inestable bajo presión).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Lanzar el dado correspondiente:</strong> Generalmente, se usa el <strong>1d20</strong> para las tiradas principales.
+                    </li>
+                    <li>
+                        <strong>Añadir los modificadores:</strong> Suma el atributo relacionado y otros bonos aplicables (habilidades, equipo, etc.).
+                    </li>
+                    <li>
+                        <strong>Comparar el resultado:</strong> Si el resultado final iguala o supera la DO, la acción tiene éxito.
+                    </li>
+                </ol>
+            </div>
+    
+            <div class="dice-examples">
+                <h3>Ejemplos Prácticos</h3>
+                <ul>
+                    <li>
+                        <strong>Situación:</strong> El jugador intenta disparar a un enemigo con una pistola.<br>
+                        <strong>Tirada:</strong> 1d20 para determinar si el disparo impacta.<br>
+                        <strong>Fórmula de daño:</strong> Si el disparo impacta, se lanza 1d8 para calcular el daño infligido.
+                    </li>
+                    <li>
+                        <strong>Situación:</strong> El jugador usa telequinesis para mover un objeto pesado.<br>
+                        <strong>Tirada:</strong> 1d20 para comprobar si logra moverlo.<br>
+                        <strong>Resultado:</strong> El éxito depende de la DO establecida por el Narrador y del atributo Voluntad (VOL) del jugador.
+                    </li>
+                    <li>
+                        <strong>Situación:</strong> Un enemigo ataca con un garrote.<br>
+                        <strong>Tirada:</strong> 1d20 para determinar si el ataque impacta.<br>
+                        <strong>Fórmula de daño:</strong> Si el ataque impacta, el Narrador lanza 1d6 + FUE del enemigo para calcular el daño.
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
+    
 
     <!-- Habilidades -->
     <section class="rules-skills">
