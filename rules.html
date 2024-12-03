@@ -439,70 +439,225 @@
 
     <!-- Poderes -->
     <section class="rules-powers">
-        <div class="container section-box">
-            <h2><img src="img/icon-powers.png" alt="Poderes" class="section-icon"> Poderes</h2>
+        <div class="container">
+            <h1>
+                <img src="img/icon-powers.png" alt="Poderes" class="section-icon">
+                Poderes
+            </h1>
+            <p>
+                Los Elegidos poseen habilidades sobrenaturales que pueden emplear para influir en el mundo que los rodea. 
+                Cada poder tiene limitaciones específicas para mantener el equilibrio del sistema. 
+                A continuación, se presentan <strong>15 poderes</strong> ampliamente desarrollados, junto con sus descripciones y ejemplos de uso.
+            </p>
+    
             <table class="styled-table">
                 <thead>
-                <tr>
-                    <th>Poder</th>
-                    <th>Descripción</th>
-                    <th>Ejemplo de Uso</th>
-                </tr>
+                    <tr>
+                        <th>Poder</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo de Uso</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Telequinesis</td>
-                    <td>Mueve objetos pequeños (máx. 5 kg).</td>
-                    <td>Desplazar un arma fuera del alcance del enemigo (DO 15).</td>
-                </tr>
-                <tr>
-                    <td>Clarividencia</td>
-                    <td>Ver imágenes de eventos cercanos (1 minuto de duración).</td>
-                    <td>Predecir una emboscada (DO 20).</td>
-                </tr>
-                <tr>
-                    <td>Regeneración</td>
-                    <td>Sanar heridas menores (1d6 puntos).</td>
-                    <td>Curarse tras un combate.</td>
-                </tr>
-                <!-- Más poderes aquí -->
+                    <tr>
+                        <td><strong>Telequinesis</strong></td>
+                        <td>Mueve objetos pequeños (máx. 5 kg). Requiere concentración.</td>
+                        <td>Desplazar un arma fuera del alcance del enemigo (DO 15).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clarividencia</strong></td>
+                        <td>Permite ver imágenes de eventos cercanos en el tiempo (1 minuto).</td>
+                        <td>Predecir una emboscada o una trampa (DO 20).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Regeneración</strong></td>
+                        <td>Sanar heridas menores. Recupera 1d6 puntos de vida por descanso corto.</td>
+                        <td>Usar el poder tras un combate para sanar heridas superficiales.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control de Fuego</strong></td>
+                        <td>Crear y manipular llamas pequeñas. Inflige 1d4 de daño por turno.</td>
+                        <td>Encender una antorcha o atacar con una pequeña bola de fuego (DO 12).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manipulación de Gravedad</strong></td>
+                        <td>Alterar el peso de un objeto en un 50% (máx. 10 kg).</td>
+                        <td>Hacer más liviano un cofre para transportarlo (DO 18).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Telepatía</strong></td>
+                        <td>Leer pensamientos o enviar mensajes mentales (alcance de 20 m).</td>
+                        <td>Comunicarse silenciosamente con un aliado durante una misión (DO 15).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Precognición</strong></td>
+                        <td>Predecir el movimiento de un enemigo en combate. Gana +2 en defensa.</td>
+                        <td>Evitar un golpe crítico al anticipar el ataque (DO 17).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control de Sombra</strong></td>
+                        <td>Oscurecer un área para reducir la visibilidad del enemigo (5 m de radio).</td>
+                        <td>Crear una zona de sombras para escapar de un enfrentamiento (DO 16).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proyección Astral</strong></td>
+                        <td>Explorar un área cercana en forma espiritual durante 5 minutos.</td>
+                        <td>Inspeccionar un edificio sin ser detectado (DO 20).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control de Agua</strong></td>
+                        <td>Manipular pequeñas cantidades de agua para crear corrientes o salpicaduras.</td>
+                        <td>Apagar un fuego o atacar con una corriente de agua (DO 14).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Creación de Escudos</strong></td>
+                        <td>Formar barreras temporales que absorben 1d6 de daño.</td>
+                        <td>Proteger a un aliado de un ataque crítico (DO 15).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Absorción de Energía</strong></td>
+                        <td>Convertir daño eléctrico en puntos de vida (1d4 por ataque recibido).</td>
+                        <td>Recibir un impacto eléctrico y recuperarse en lugar de sufrir daño.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comunión Animal</strong></td>
+                        <td>Hablar y entender animales durante 10 minutos.</td>
+                        <td>Convencer a un cuervo para que recoja un objeto perdido (DO 13).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desintegración Parcial</strong></td>
+                        <td>Reducir la integridad estructural de un objeto pequeño.</td>
+                        <td>Debilitar una cerradura para romperla más fácilmente (DO 18).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manipulación de Luz</strong></td>
+                        <td>Crear destellos para cegar temporalmente a un enemigo (1 turno).</td>
+                        <td>Desorientar a un guardia durante una huida (DO 16).</td>
+                    </tr>
                 </tbody>
             </table>
+    
+            <div class="powers-notes">
+                <h3>Notas sobre el Uso de Poderes</h3>
+                <ul>
+                    <li>Algunos poderes requieren un gasto de energía o un descanso antes de volver a usarse.</li>
+                    <li>El Narrador puede ajustar las dificultades según el contexto narrativo.</li>
+                    <li>Los poderes pueden combinarse creativamente para resolver problemas complejos.</li>
+                </ul>
+            </div>
         </div>
     </section>
+    
 
     <!-- Resolución de Acciones -->
     <section class="rules-actions">
-        <div class="container section-box">
-            <h2>Resolución de Acciones</h2>
+        <div class="container">
+            <h1>
+                <img src="img/icon-actions.png" alt="Resolución de Acciones" class="section-icon">
+                Resolución de Acciones
+            </h1>
+            <p>
+                Las acciones en el juego se resuelven mediante tiradas de dados y comparaciones con una <strong>Dificultad Objetivo (DO)</strong>. 
+                El Narrador determina la DO según la complejidad de la acción y las condiciones del entorno. 
+                Los jugadores pueden sumar bonificaciones de atributos, habilidades y equipo a sus tiradas para aumentar sus posibilidades de éxito.
+            </p>
+    
+            <h3>Tabla de Dificultades</h3>
+            <p>
+                A continuación, se presenta una tabla con los niveles típicos de dificultad y ejemplos para cada uno:
+            </p>
             <table class="styled-table">
                 <thead>
-                <tr>
-                    <th>Dificultad</th>
-                    <th>Descripción</th>
-                    <th>DO</th>
-                </tr>
+                    <tr>
+                        <th>Dificultad</th>
+                        <th>Descripción</th>
+                        <th>DO</th>
+                        <th>Ejemplo</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Fácil</td>
-                    <td>Tareas simples sin riesgo.</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>Moderada</td>
-                    <td>Requiere habilidad y concentración.</td>
-                    <td>15</td>
-                </tr>
-                <tr>
-                    <td>Difícil</td>
-                    <td>Un verdadero desafío.</td>
-                    <td>20</td>
-                </tr>
+                    <tr>
+                        <td>Muy Fácil</td>
+                        <td>Acciones triviales que casi siempre tienen éxito.</td>
+                        <td>5</td>
+                        <td>Encender una vela en un ambiente tranquilo.</td>
+                    </tr>
+                    <tr>
+                        <td>Fácil</td>
+                        <td>Tareas simples con un mínimo de habilidad.</td>
+                        <td>10</td>
+                        <td>Trepar una valla baja.</td>
+                    </tr>
+                    <tr>
+                        <td>Moderada</td>
+                        <td>Requiere habilidad o concentración.</td>
+                        <td>15</td>
+                        <td>Esquivar un ataque enemigo.</td>
+                    </tr>
+                    <tr>
+                        <td>Difícil</td>
+                        <td>Un verdadero desafío para la mayoría de personajes.</td>
+                        <td>20</td>
+                        <td>Desactivar una trampa compleja bajo presión.</td>
+                    </tr>
+                    <tr>
+                        <td>Muy Difícil</td>
+                        <td>Acciones que requieren destreza extraordinaria.</td>
+                        <td>25</td>
+                        <td>Convencer a un enemigo hostil de que no ataque.</td>
+                    </tr>
+                    <tr>
+                        <td>Épico</td>
+                        <td>Solo personajes excepcionales pueden lograrlo.</td>
+                        <td>30</td>
+                        <td>Saltar entre dos edificios lejanos en mal estado.</td>
+                    </tr>
                 </tbody>
             </table>
+    
+            <h3>Resolviendo Acciones</h3>
+            <p>
+                Para resolver una acción, sigue estos pasos:
+            </p>
+            <ol>
+                <li><strong>Describe la acción:</strong> El jugador explica lo que intenta hacer.</li>
+                <li><strong>Establece la DO:</strong> El Narrador determina la dificultad según la situación.</li>
+                <li><strong>Realiza la tirada:</strong> Lanza un dado de 20 caras (<strong>1d20</strong>) y suma:
+                    <ul>
+                        <li><strong>Bono del atributo relevante:</strong> Cada acción está ligada a un atributo.</li>
+                        <li><strong>Bono de habilidad:</strong> Si la acción está relacionada con una habilidad destacada.</li>
+                        <li><strong>Otros modificadores:</strong> Bonificaciones de equipo, poderes o circunstancias especiales.</li>
+                    </ul>
+                </li>
+                <li><strong>Comparación con la DO:</strong> Si el resultado total iguala o supera la DO, la acción tiene éxito.</li>
+            </ol>
+    
+            <h3>Modificadores Adicionales</h3>
+            <p>
+                En ciertas situaciones, el Narrador puede aplicar modificadores para reflejar las condiciones del entorno:
+            </p>
+            <ul>
+                <li><strong>Ventaja:</strong> Permite lanzar dos 1d20 y quedarse con el mejor resultado. Ejemplo: Realizar una acción en un entorno favorable.</li>
+                <li><strong>Desventaja:</strong> Lanza dos 1d20 y toma el peor resultado. Ejemplo: Intentar actuar mientras estás herido o bajo presión extrema.</li>
+                <li><strong>Bonificaciones del equipo:</strong> Por ejemplo, usar herramientas especializadas puede otorgar +2 o más a la tirada.</li>
+            </ul>
+    
+            <h3>Ejemplo Completo</h3>
+            <p>
+                Un personaje intenta cruzar un puente colgante deteriorado mientras lo persiguen. El Narrador establece una DO de 18 debido al mal estado del puente y la presión de la situación. El jugador tiene:
+            </p>
+            <ul>
+                <li><strong>Agilidad (AGI):</strong> +4.</li>
+                <li><strong>Habilidad de Acrobacias:</strong> +2.</li>
+                <li><strong>Tirada de 1d20:</strong> Lanza el dado y obtiene un 13.</li>
+            </ul>
+            <p><strong>Cálculo:</strong> 13 (tirada) + 4 (AGI) + 2 (Acrobacias) = 19.</p>
+            <p>
+                El resultado supera la DO de 18, por lo que el personaje cruza con éxito el puente antes de que los perseguidores puedan atraparlo.
+            </p>
         </div>
     </section>
+    
 </main>
 
 <footer>
