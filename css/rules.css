@@ -15,7 +15,7 @@
 }
 
 /* Padding adicional para secciones individuales */
-.rules-intro, .rules-attributes, .rules-dice {
+.rules-intro, .rules-attributes, .rules-dice, .rules-skills {
     padding: 40px; /* Espaciado adicional en la introducción */
     background-color: #f8f9fa; /* Fondo claro para diferenciar */
     border-radius: 10px; /* Bordes redondeados */
@@ -362,5 +362,80 @@
 }
 
 .rules-dice li {
+    margin-bottom: 10px;
+}
+
+/* Contenedor General */
+.rules-skills .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Títulos */
+.rules-skills h2, .rules-skills h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-left: 5px solid #3498db;
+    padding-left: 10px;
+}
+
+/* Tablas */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #3498db;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.styled-table td {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.styled-table tr:nth-child(even) td {
+    background-color: #ecf0f1;
+}
+
+.styled-table tr:hover td {
+    background-color: #d6eaf8;
+}
+
+/* Fórmula Box */
+.formula-box {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    color: #2c3e50;
+}
+
+/* Listas */
+.rules-skills ul, .rules-skills ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.rules-skills li {
     margin-bottom: 10px;
 }

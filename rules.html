@@ -300,19 +300,142 @@
 
     <!-- Habilidades -->
     <section class="rules-skills">
-        <div class="container section-box">
-            <h2><img src="img/icon-skills.png" alt="Habilidades" class="section-icon"> Habilidades</h2>
-            <p>Los jugadores seleccionan <strong>3 habilidades destacadas</strong>, que reciben un bono inicial de +2. Cada habilidad está asociada a un atributo:</p>
-            <ul class="styled-list">
-                <li><strong>FUE:</strong> Atletismo, Trepar, Nadar.</li>
-                <li><strong>AGI:</strong> Sigilo, Esquivar, Acrobacias.</li>
-                <li><strong>RES:</strong> Supervivencia, Resistencia Física, Tolerancia.</li>
-                <li><strong>INT:</strong> Investigación, Tecnología, Conocimiento.</li>
-                <li><strong>CAR:</strong> Persuasión, Intimidación, Engaño.</li>
-                <li><strong>VOL:</strong> Resistencia Mental, Concentración, Meditación.</li>
-            </ul>
+        <div class="container">
+            <h1>
+                <img src="img/icon-skills.png" alt="Habilidades" class="section-icon">
+                Habilidades
+            </h1>
+            <p>
+                Las habilidades representan las áreas específicas en las que un personaje puede destacar y tener un mayor impacto en el juego. 
+                Al crear un personaje, cada jugador puede seleccionar <strong>3 habilidades destacadas</strong>. Estas habilidades comienzan con un bono inicial de <strong>+2</strong> y están asociadas a un atributo principal.
+            </p>
+    
+            <div class="skills-categories">
+                <h3>Categorías de Habilidades</h3>
+                <p>
+                    Cada habilidad pertenece a una de las seis categorías de atributos básicos. Los jugadores pueden elegir habilidades relacionadas con sus atributos más altos para maximizar su eficacia.
+                </p>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Habilidades Asociadas</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fuerza (FUE)</strong></td>
+                            <td>Atletismo, Trepar, Nadar</td>
+                            <td>Habilidades físicas que requieren potencia y esfuerzo.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Agilidad (AGI)</strong></td>
+                            <td>Sigilo, Esquivar, Acrobacias</td>
+                            <td>Habilidades que dependen de la destreza, los reflejos y la coordinación.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resistencia (RES)</strong></td>
+                            <td>Supervivencia, Resistencia Física, Tolerancia</td>
+                            <td>Habilidades que miden la capacidad de soportar condiciones adversas.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Inteligencia (INT)</strong></td>
+                            <td>Investigación, Tecnología, Conocimiento</td>
+                            <td>Habilidades relacionadas con el razonamiento y el análisis lógico.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Carisma (CAR)</strong></td>
+                            <td>Persuasión, Intimidación, Engaño</td>
+                            <td>Habilidades sociales que implican interacción y manipulación.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Voluntad (VOL)</strong></td>
+                            <td>Resistencia Mental, Concentración, Meditación</td>
+                            <td>Habilidades que reflejan la fortaleza mental y la capacidad de enfoque.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="skills-usage">
+                <h3>Mecánicas de Uso de Habilidades</h3>
+                <p>
+                    Las habilidades se utilizan para realizar acciones específicas que requieren destreza o experiencia. El proceso para usar una habilidad es el siguiente:
+                </p>
+                <ol>
+                    <li>
+                        <strong>Declarar la acción:</strong> El jugador describe qué intenta hacer, indicando la habilidad que desea usar.
+                    </li>
+                    <li>
+                        <strong>Realizar una tirada de 1d20:</strong> El jugador lanza un dado de 20 caras y suma:
+                        <ul>
+                            <li>El bono del atributo asociado.</li>
+                            <li>El bono inicial de la habilidad (si es destacada).</li>
+                            <li>Cualquier modificador adicional otorgado por equipo o circunstancias.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Comparar con la Dificultad Objetivo (DO):</strong> Si el resultado total iguala o supera la DO establecida por el Narrador, la acción tiene éxito.
+                    </li>
+                </ol>
+                <p>
+                    Ejemplo: Un personaje con la habilidad destacada "Sigilo" (+2) intenta infiltrarse en un campamento enemigo. 
+                    El atributo Agilidad (AGI) del personaje es 6. El jugador lanza 1d20 y obtiene un 12. El resultado total es:
+                </p>
+                <div class="formula-box">
+                    <p><strong>12 (tirada) + 6 (AGI) + 2 (Sigilo) = 20</strong></p>
+                </div>
+                <p>Si la DO establecida por el Narrador es 18, el personaje logra infiltrarse sin ser detectado.</p>
+            </div>
+    
+            <div class="skills-list">
+                <h3>Lista de Habilidades y Descripciones</h3>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Habilidad</th>
+                            <th>Atributo Asociado</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Atletismo</td>
+                            <td>Fuerza (FUE)</td>
+                            <td>Realizar tareas físicas como correr largas distancias o levantar objetos pesados.</td>
+                        </tr>
+                        <tr>
+                            <td>Sigilo</td>
+                            <td>Agilidad (AGI)</td>
+                            <td>Desplazarse sin ser detectado por enemigos u observadores.</td>
+                        </tr>
+                        <tr>
+                            <td>Supervivencia</td>
+                            <td>Resistencia (RES)</td>
+                            <td>Encontrar comida, refugio y recursos en entornos hostiles.</td>
+                        </tr>
+                        <tr>
+                            <td>Investigación</td>
+                            <td>Inteligencia (INT)</td>
+                            <td>Analizar pistas, resolver acertijos o buscar información relevante.</td>
+                        </tr>
+                        <tr>
+                            <td>Persuasión</td>
+                            <td>Carisma (CAR)</td>
+                            <td>Convencer a otros para que actúen a favor del personaje.</td>
+                        </tr>
+                        <tr>
+                            <td>Resistencia Mental</td>
+                            <td>Voluntad (VOL)</td>
+                            <td>Resistir efectos psicológicos o mantener la calma bajo presión.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
+    
 
     <!-- Poderes -->
     <section class="rules-powers">
