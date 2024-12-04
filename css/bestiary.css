@@ -1,3 +1,7 @@
+main {
+    padding: 4rem;
+}
+
 .bestiary-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -44,4 +48,29 @@
     margin-bottom: 5px;
     font-size: 0.9em;
     color: #333;
+}
+
+.card-skills {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+
+.card-skills h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+.card-skills ul {
+    padding-left: 20px;
+    margin: 10px 0;
+    list-style-type: disc;
+}
+
+.card-skills li {
+    font-size: 0.9em;
+    color: #34495e;
+    margin-bottom: 5px;
 }

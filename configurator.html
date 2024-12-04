@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurador de Personaje</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/configurator.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Configurador de Personaje</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="rules.html">Normas del Sistema</a></li>
+                    <li><a href="bestiary.html">Bestiario</a></li>
+                    <li><a href="characters.html">Personajes</a></li>
+                    <li><a href="configurator.html" class="active">Configurador</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="configurator">
+            <div class="container">
+                <h2>Crea tu Personaje</h2>
+                <form id="character-form">
+                    <div class="form-group">
+                        <label for="name">Nombre del Personaje:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="class">Clase:</label>
+                        <select id="class" name="class" required>
+                            <option value="Pistolero">Pistolero</option>
+                            <option value="Explorador">Explorador</option>
+                            <option value="Sanador">Sanador</option>
+                            <option value="Técnico">Técnico</option>
+                            <option value="Intelectual">Intelectual</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="origin">Origen:</label>
+                        <select id="origin" name="origin" required>
+                            <option value="Ciudad Industrial">Ciudad Industrial</option>
+                            <option value="Pueblo Rural">Pueblo Rural</option>
+                            <option value="Zona Fronteriza">Zona Fronteriza</option>
+                            <option value="Mundo Colmena">Mundo Colmena</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="stats">Atributos:</label>
+                        <p>Puntos disponibles: <span id="points-left">40</span></p>
+                        <div class="stat-controls">
+                            <label>Fuerza: <input type="number" id="strength" name="strength" value="0" min="0" max="10"></label>
+                            <label>Agilidad: <input type="number" id="agility" name="agility" value="0" min="0" max="10"></label>
+                            <label>Resistencia: <input type="number" id="endurance" name="endurance" value="0" min="0" max="10"></label>
+                            <label>Inteligencia: <input type="number" id="intelligence" name="intelligence" value="0" min="0" max="10"></label>
+                            <label>Carisma: <input type="number" id="charisma" name="charisma" value="0" min="0" max="10"></label>
+                            <label>Voluntad: <input type="number" id="willpower" name="willpower" value="0" min="0" max="10"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="skills">Habilidades:</label>
+                        <p>Selecciona 3 habilidades destacadas:</p>
+                        <div id="skills-container">
+                            <!-- Las habilidades se cargarán dinámicamente -->
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Generar Personaje</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="character-summary hidden" id="character-summary">
+            <div class="container">
+                <h2>Resumen del Personaje</h2>
+                <div id="character-details">
+                    <!-- Aquí se mostrará el resumen -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p class="footer-copy">&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/configurator.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes - Juego de Rol</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/characters.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Personajes Predefinidos</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="rules.html">Normas del Sistema</a></li>
+                    <li><a href="bestiary.html">Bestiario</a></li>
+                    <li><a href="characters.html" class="active">Personajes</a></li>
+                    <li><a href="configurator.html">Configurador</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="characters-intro">
+            <div class="container">
+                <h2>Explora los Personajes Predefinidos</h2>
+                <p>
+                    Conoce los héroes y antihéroes que forman parte de este mundo. Cada personaje está diseñado
+                    con una historia única, habilidades especiales y estadísticas personalizadas para enriquecer tu aventura.
+                </p>
+            </div>
+        </section>
+
+        <section class="characters-list">
+            <div class="container">
+                <h2>Lista de Personajes</h2>
+                <div id="characters-content" class="characters-grid">
+                    <!-- Los personajes se cargarán aquí dinámicamente -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p class="footer-copy">&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/characters-data.js"></script>
+    <script src="js/characters.js"></script>
+</body>
+</html>

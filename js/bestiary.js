@@ -29,6 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li><strong>Voluntad:</strong> ${creature.stats.willpower}</li>
                 </ul>
             </div>
+            <div class="card-skills">
+                <h4>Habilidades</h4>
+                <ul>
+                    ${creature.skills.map(skill => `<li>${skill}</li>`).join('')}
+                </ul>
+            </div>
         `;
 
         bestiaryContent.appendChild(creatureContainer);

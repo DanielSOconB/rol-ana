@@ -1,173 +1,146 @@
 const creatures = [
     {
-        "name": "Dragón de Sombras",
-        "type": "Criatura Mítica",
-        "origin": "Montañas del Ocaso",
-        "age": "300 años",
-        "image": "img/shadow-dragon.png",
-        "story": "Este dragón legendario ha sido el guardián de las Montañas del Ocaso durante siglos, su presencia intimidante asegura que los secretos de la región permanezcan protegidos. Cuenta la leyenda que solo los más valientes o desesperados se atreven a cruzar sus dominios. Aquellos que lo desafían rara vez regresan, y los que lo hacen traen historias de una criatura que domina las sombras mismas, utilizando la oscuridad como un arma y un escudo.",
-        "appearance": "De tamaño colosal, el Dragón de Sombras tiene escamas negras como ónix que parecen absorber y distorsionar la luz. Sus ojos, de un rojo profundo, brillan como brasas en la oscuridad, y sus alas membranosas proyectan sombras espectaculares, envolviendo todo a su alrededor en una penumbra inquietante. Su cuerpo está adornado con cicatrices de antiguas batallas, y su aliento emana una niebla oscura que debilita a sus enemigos.",
-        "stats": {
-            "strength": 18,
-            "agility": 12,
-            "endurance": 20,
-            "intelligence": 14,
-            "charisma": 10,
-            "willpower": 16
-        }
-    },
-    {
-        "name": "Hombre Lobo Errante",
-        "type": "Criatura Mutante",
-        "origin": "Bosques del Norte",
-        "age": "45 años",
-        "image": "img/werewolf.png",
-        "story": "Una figura maldita que vaga por los bosques bajo la luna llena.",
-        "appearance": "Un ser humanoide con pelaje gris oscuro y ojos brillantes.",
-        "stats": {
-            "strength": 14,
-            "agility": 16,
-            "endurance": 12,
-            "intelligence": 10,
-            "charisma": 8,
-            "willpower": 12
-        }
-    },
-    {
-        "name": "Gárgola de Piedra",
-        "type": "Criatura Mágica",
-        "origin": "Catedrales Antiguas",
-        "age": "500 años",
-        "image": "img/gargoyle.png",
-        "story": "Guardianes inmóviles durante el día, estas criaturas cobran vida para proteger sus dominios en la noche.",
-        "appearance": "Esculturas de piedra con alas imponentes y rostros intimidantes.",
-        "stats": {
-            "strength": 15,
-            "agility": 8,
-            "endurance": 18,
-            "intelligence": 8,
-            "charisma": 5,
-            "willpower": 14
-        }
-    },
-    {
-        "name": "Sirena de las Profundidades",
-        "type": "Criatura Acuática",
-        "origin": "Océanos Abismales",
-        "age": "100 años",
-        "image": "img/mermaid.png",
-        "story": "Conocidas por su canto hipnótico, estas sirenas atraen a los navegantes a su perdición.",
-        "appearance": "Mitad humana, mitad pez, con escamas iridiscentes y ojos hipnotizantes.",
+        "name": "Jack el Destripador",
+        "type": "Leyenda Urbana",
+        "origin": "Londres Victoriano",
+        "age": "Aproximadamente 30-40 años (especulación)",
+        "image": "img/jack-the-ripper.webp",
+        "story": "Un asesino en serie conocido por aterrorizar el distrito de Whitechapel en Londres durante 1888. Su verdadera identidad nunca fue descubierta.",
+        "appearance": "Un hombre vestido con capa oscura y sombrero, moviéndose rápidamente entre las sombras.",
         "stats": {
             "strength": 10,
             "agility": 14,
             "endurance": 12,
-            "intelligence": 12,
-            "charisma": 18,
-            "willpower": 12
-        }
-    },
-    {
-        "name": "Fénix Escarlata",
-        "type": "Criatura Mítica",
-        "origin": "Volcanes Extintos",
-        "age": "Inmortal",
-        "image": "img/phoenix.png",
-        "story": "Un ave legendaria que renace de sus cenizas, símbolo de inmortalidad y renacimiento.",
-        "appearance": "Ave de fuego con plumas rojas y doradas, irradiando calor intenso.",
-        "stats": {
-            "strength": 14,
-            "agility": 16,
-            "endurance": 20,
-            "intelligence": 14,
-            "charisma": 15,
-            "willpower": 20
-        }
-    },
-    {
-        "name": "Espectro de Medianoche",
-        "type": "Criatura Fantasmal",
-        "origin": "Cementerios Olvidados",
-        "age": "200 años",
-        "image": "img/specter.png",
-        "story": "Un espíritu atormentado que vaga en busca de venganza contra quienes profanaron su descanso.",
-        "appearance": "Una figura etérea envuelta en niebla oscura, con ojos que emiten un brillo tenue.",
-        "stats": {
-            "strength": 6,
-            "agility": 14,
-            "endurance": 10,
-            "intelligence": 12,
-            "charisma": 8,
-            "willpower": 18
-        }
-    },
-    {
-        "name": "Minotauro del Laberinto",
-        "type": "Criatura Legendaria",
-        "origin": "Islas Perdidas",
-        "age": "120 años",
-        "image": "img/minotaur.png",
-        "story": "Una bestia imponente que protege los secretos de un antiguo laberinto.",
-        "appearance": "Un humanoide musculoso con cabeza de toro y ojos inyectados en sangre.",
-        "stats": {
-            "strength": 20,
-            "agility": 12,
-            "endurance": 18,
-            "intelligence": 8,
-            "charisma": 6,
+            "intelligence": 16,
+            "charisma": 10,
             "willpower": 14
-        }
+        },
+        "skills": ["Sigilo experto", "Ataque crítico", "Manipulación psicológica"]
     },
     {
-        "name": "Vampiro Nocturno",
-        "type": "Criatura Sobrenatural",
-        "origin": "Castillos Abandonados",
-        "age": "400 años",
-        "image": "img/vampire.png",
-        "story": "Un ser inmortal que se alimenta de la sangre de los vivos, temido por su astucia y poder.",
-        "appearance": "Pálido, con colmillos afilados y una mirada hipnótica.",
+        "name": "Baba Yaga",
+        "type": "Leyenda Folklórica",
+        "origin": "Europa del Este",
+        "age": "Indeterminado",
+        "image": "img/baba-yaga.webp",
+        "story": "Una figura de la mitología eslava, conocida como una anciana sabia y peligrosa que vive en una cabaña sobre patas de gallina. Es temida y respetada a partes iguales.",
+        "appearance": "Una mujer anciana con cabello gris desordenado, mirada penetrante y una figura encorvada.",
+        "stats": {
+            "strength": 8,
+            "agility": 10,
+            "endurance": 12,
+            "intelligence": 18,
+            "charisma": 12,
+            "willpower": 16
+        },
+        "skills": ["Control de sombras", "Clarividencia", "Creación de ilusiones"]
+    },
+    {
+        "name": "El Hombre del Saco",
+        "type": "Leyenda Infantil",
+        "origin": "Europa y América Latina",
+        "age": "Variable según la historia",
+        "image": "img/boogeyman.webp",
+        "story": "Una figura que los padres utilizaban para asustar a los niños desobedientes. Según el mito, secuestra a los pequeños y se los lleva en un saco.",
+        "appearance": "Un hombre alto y delgado, vestido con ropa vieja y un saco grande al hombro.",
         "stats": {
             "strength": 12,
-            "agility": 14,
-            "endurance": 16,
-            "intelligence": 18,
-            "charisma": 16,
-            "willpower": 14
-        }
-    },
-    {
-        "name": "Elemental de Tierra",
-        "type": "Criatura Elemental",
-        "origin": "Montañas Rocosas",
-        "age": "Milenario",
-        "image": "img/earth-elemental.png",
-        "story": "Una manifestación viva de la tierra, imparable en su camino.",
-        "appearance": "Un coloso hecho de roca, tierra y raíces.",
-        "stats": {
-            "strength": 20,
-            "agility": 6,
-            "endurance": 22,
+            "agility": 10,
+            "endurance": 14,
             "intelligence": 10,
-            "charisma": 5,
-            "willpower": 15
-        }
+            "charisma": 6,
+            "willpower": 12
+        },
+        "skills": ["Amenaza física", "Absorción de energía vital", "Detección de miedo"]
     },
     {
-        "name": "Araña Gigante",
-        "type": "Criatura Mutante",
-        "origin": "Bosques Oscuros",
-        "age": "30 años",
-        "image": "img/giant-spider.png",
-        "story": "Una araña de tamaño colosal que teje trampas mortales para sus presas.",
-        "appearance": "Un cuerpo peludo con múltiples ojos y patas largas y puntiagudas.",
+        "name": "María Sangrienta",
+        "type": "Leyenda Urbana",
+        "origin": "Diversos países occidentales",
+        "age": "Fallecida (mito)",
+        "image": "img/bloody-mary.webp",
+        "story": "Un espíritu que aparece al decir su nombre frente a un espejo en la oscuridad. Está rodeada de historias de venganza y tragedia.",
+        "appearance": "Una figura femenina pálida con cabellos desordenados y mirada acusadora.",
+        "stats": {
+            "strength": 8,
+            "agility": 10,
+            "endurance": 12,
+            "intelligence": 14,
+            "charisma": 8,
+            "willpower": 18
+        },
+        "skills": ["Ataque mental", "Invocación de oscuridad", "Aparición espectral"]
+    },
+    {
+        "name": "La Llorona",
+        "type": "Leyenda Folklórica",
+        "origin": "América Latina",
+        "age": "Fallecida (mito)",
+        "image": "img/la-llorona.webp",
+        "story": "Un espíritu errante que busca a sus hijos, llorando por la culpa de haberlos perdido. Se dice que aparece cerca de ríos y lagos.",
+        "appearance": "Una mujer vestida con un vestido blanco harapiento, llorando desconsoladamente.",
+        "stats": {
+            "strength": 6,
+            "agility": 10,
+            "endurance": 10,
+            "intelligence": 12,
+            "charisma": 14,
+            "willpower": 16
+        },
+        "skills": ["Lamento desgarrador", "Atracción hipnótica", "Manipulación emocional"]
+    },
+    {
+        "name": "El Charro Negro",
+        "type": "Leyenda Mexicana",
+        "origin": "México",
+        "age": "Indeterminado",
+        "image": "img/el-charro-negro.webp",
+        "story": "Un jinete oscuro que aparece en caminos solitarios ofreciendo riquezas a los viajeros, pero a cambio de sus almas.",
+        "appearance": "Un hombre vestido con un traje de charro negro impecable, montado en un caballo del mismo color.",
+        "stats": {
+            "strength": 10,
+            "agility": 12,
+            "endurance": 14,
+            "intelligence": 14,
+            "charisma": 16,
+            "willpower": 18
+        },
+        "skills": ["Persuasión infernal", "Riquezas ilusorias", "Velocidad sobrenatural"]
+    },
+    {
+        "name": "El Jinete Sin Cabeza",
+        "type": "Leyenda Americana",
+        "origin": "Sleepy Hollow, Nueva York",
+        "age": "Fallecido (mito)",
+        "image": "img/headless-horseman.webp",
+        "story": "Un espíritu vengativo que busca su cabeza perdida, aterrorizando a los viajeros nocturnos.",
+        "appearance": "Un jinete en un caballo negro, sosteniendo una calabaza o un cráneo como cabeza.",
         "stats": {
             "strength": 14,
-            "agility": 18,
-            "endurance": 12,
-            "intelligence": 8,
-            "charisma": 3,
-            "willpower": 10
-        }
+            "agility": 12,
+            "endurance": 14,
+            "intelligence": 10,
+            "charisma": 8,
+            "willpower": 16
+        },
+        "skills": ["Ataque decapitador", "Aparición montada", "Rastreo sobrenatural"]
+    },
+    {
+        "name": "La Dama de Blanco",
+        "type": "Leyenda Fantasmal",
+        "origin": "Diversas culturas",
+        "age": "Fallecida (mito)",
+        "image": "img/white-lady.webp",
+        "story": "Un espíritu femenino que aparece en carreteras o puentes, llorando por un amor perdido.",
+        "appearance": "Una mujer vestida completamente de blanco, con un aura de tristeza y melancolía.",
+        "stats": {
+            "strength": 6,
+            "agility": 8,
+            "endurance": 10,
+            "intelligence": 14,
+            "charisma": 12,
+            "willpower": 16
+        },
+        "skills": ["Presencia etérea", "Manipulación emocional", "Desaparición rápida"]
     }
-    // Continúa añadiendo más criaturas
 ];
