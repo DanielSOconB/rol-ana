@@ -1,0 +1,47 @@
+.bestiary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.creature {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+}
+
+.creature-header h3 {
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.creature-header p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.creature-body {
+    margin-top: 10px;
+}
+
+.creature-body img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.creature-stats ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.creature-stats ul li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #333;
+}

@@ -1,10 +1,36 @@
 [
     {
-        "name": "Fantasma Errante",
-        "description": "Una entidad espectral que persigue lugares de gran tragedia."
+        "name": "Dragón de Sombras",
+        "type": "Criatura Mítica",
+        "origin": "Montañas del Ocaso",
+        "age": "300 años",
+        "image": "img/shadow-dragon.png",
+        "story": "Un antiguo guardián de las Montañas del Ocaso, conocido por aterrorizar a los invasores.",
+        "appearance": "Gigantesco, con escamas negras que reflejan la luz como sombras vivientes.",
+        "stats": {
+            "strength": 18,
+            "agility": 12,
+            "endurance": 20,
+            "intelligence": 14,
+            "charisma": 10,
+            "willpower": 16
+        }
     },
     {
-        "name": "Yokai del Bosque",
-        "description": "Una criatura ancestral que protege los secretos del bosque."
+        "name": "Hombre Lobo Errante",
+        "type": "Criatura Mutante",
+        "origin": "Bosques del Norte",
+        "age": "45 años",
+        "image": "img/werewolf.png",
+        "story": "Una figura maldita que vaga por los bosques bajo la luna llena.",
+        "appearance": "Un ser humanoide con pelaje gris oscuro y ojos brillantes.",
+        "stats": {
+            "strength": 14,
+            "agility": 16,
+            "endurance": 12,
+            "intelligence": 10,
+            "charisma": 8,
+            "willpower": 12
+        }
     }
 ]
