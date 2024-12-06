@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurador de Personaje</title>
+    <title>Configurador de Personajes</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/configurator.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Configurador de Personaje</h1>
+            <h1>Configurador de Personajes</h1>
             <nav>
                 <ul class="nav-list">
                     <li><a href="index.html">Inicio</a></li>
@@ -24,75 +24,109 @@
     </header>
 
     <main>
-        <section class="configurator">
-            <div class="container">
-                <h2>Crea tu Personaje</h2>
-                <form id="character-form">
-                    <div class="form-group">
-                        <label for="name">Nombre del Personaje:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="class">Clase:</label>
-                        <select id="class" name="class" required>
-                            <option value="Pistolero">Pistolero</option>
-                            <option value="Explorador">Explorador</option>
-                            <option value="Sanador">Sanador</option>
-                            <option value="Técnico">Técnico</option>
-                            <option value="Intelectual">Intelectual</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="origin">Origen:</label>
-                        <select id="origin" name="origin" required>
-                            <option value="Ciudad Industrial">Ciudad Industrial</option>
-                            <option value="Pueblo Rural">Pueblo Rural</option>
-                            <option value="Zona Fronteriza">Zona Fronteriza</option>
-                            <option value="Mundo Colmena">Mundo Colmena</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="stats">Atributos:</label>
-                        <p>Puntos disponibles: <span id="points-left">40</span></p>
-                        <div class="stat-controls">
-                            <label>Fuerza: <input type="number" id="strength" name="strength" value="0" min="0" max="10"></label>
-                            <label>Agilidad: <input type="number" id="agility" name="agility" value="0" min="0" max="10"></label>
-                            <label>Resistencia: <input type="number" id="endurance" name="endurance" value="0" min="0" max="10"></label>
-                            <label>Inteligencia: <input type="number" id="intelligence" name="intelligence" value="0" min="0" max="10"></label>
-                            <label>Carisma: <input type="number" id="charisma" name="charisma" value="0" min="0" max="10"></label>
-                            <label>Voluntad: <input type="number" id="willpower" name="willpower" value="0" min="0" max="10"></label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="skills">Habilidades:</label>
-                        <p>Selecciona 3 habilidades destacadas:</p>
-                        <div id="skills-container">
-                            <!-- Las habilidades se cargarán dinámicamente -->
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="btn">Generar Personaje</button>
-                </form>
-            </div>
-        </section>
+        <form id="character-form">
+            <!-- Paso 1: Información General -->
+            <section id="step-1" class="form-step">
+                <h2>Información General</h2>
+                <label for="name">Nombre del Personaje:</label>
+                <input type="text" id="name" name="name" required>
 
-        <section class="character-summary hidden" id="character-summary">
-            <div class="container">
-                <h2>Resumen del Personaje</h2>
-                <div id="character-details">
-                    <!-- Aquí se mostrará el resumen -->
+                <label for="class">Clase:</label>
+                <select id="class" name="class" required>
+                    <option value="">Selecciona una clase</option>
+                    <option value="Guerrero">Guerrero</option>
+                    <option value="Sanador">Sanador</option>
+                    <option value="Explorador">Explorador</option>
+                    <option value="Intelectual">Intelectual</option>
+                    <option value="Forajido">Forajido</option>
+                </select>
+
+                <label for="origin">Lugar de Origen:</label>
+                <select id="origin" name="origin" required>
+                    <option value="">Selecciona un lugar</option>
+                    <option value="Mundo Colmena">Mundo Colmena</option>
+                    <option value="Ciudad Industrial">Ciudad Industrial</option>
+                    <option value="Pueblo Rural">Pueblo Rural</option>
+                    <option value="Zona Fronteriza">Zona Fronteriza</option>
+                </select>
+
+                <label for="appearance">Descripción del Personaje:</label>
+                <textarea id="appearance" name="appearance" rows="4"></textarea>
+
+                <label for="image">Subir Imagen:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+
+                <button type="button" class="next-btn" data-next="step-2">Siguiente</button>
+            </section>
+
+            <!-- Paso 2: Atributos -->
+            <section id="step-2" class="form-step">
+                <h2>Atributos</h2>
+                <p>Reparte 40 puntos entre los siguientes atributos. Mínimo 1, máximo 10 por atributo.</p>
+                <div id="attributes">
+                    <label>Fuerza (FUE):</label>
+                    <input type="number" name="strength" min="1" max="10" value="1" required>
+
+                    <label>Agilidad (AGI):</label>
+                    <input type="number" name="agility" min="1" max="10" value="1" required>
+
+                    <label>Resistencia (RES):</label>
+                    <input type="number" name="endurance" min="1" max="10" value="1" required>
+
+                    <label>Inteligencia (INT):</label>
+                    <input type="number" name="intelligence" min="1" max="10" value="1" required>
+
+                    <label>Carisma (CAR):</label>
+                    <input type="number" name="charisma" min="1" max="10" value="1" required>
+
+                    <label>Voluntad (VOL):</label>
+                    <input type="number" name="willpower" min="1" max="10" value="1" required>
                 </div>
-            </div>
-        </section>
+
+                <p id="remaining-points">Puntos Restantes: <span>34</span></p>
+
+                <button type="button" class="prev-btn" data-prev="step-1">Atrás</button>
+                <button type="button" class="next-btn" data-next="step-3">Siguiente</button>
+            </section>
+
+            <!-- Paso 3: Habilidades -->
+            <section id="step-3" class="form-step">
+                <h2>Habilidades</h2>
+                <p>Selecciona 3 habilidades principales:</p>
+                <div id="skills">
+                    <label><input type="checkbox" name="skills" value="Tiro Preciso"> Tiro Preciso</label>
+                    <label><input type="checkbox" name="skills" value="Esquiva"> Esquiva</label>
+                    <label><input type="checkbox" name="skills" value="Supervivencia"> Supervivencia</label>
+                    <label><input type="checkbox" name="skills" value="Conocimiento Cultural"> Conocimiento Cultural</label>
+                    <label><input type="checkbox" name="skills" value="Medicina"> Medicina</label>
+                    <label><input type="checkbox" name="skills" value="Sigilo"> Sigilo</label>
+                </div>
+
+                <button type="button" class="prev-btn" data-prev="step-2">Atrás</button>
+                <button type="button" class="next-btn" data-next="step-4">Siguiente</button>
+            </section>
+
+            <!-- Paso 4: Poder Especial -->
+            <section id="step-4" class="form-step">
+                <h2>Poder Especial</h2>
+                <label for="power">Selecciona un Poder Especial:</label>
+                <select id="power" name="power" required>
+                    <option value="">Selecciona un poder</option>
+                    <option value="Telequinesis">Telequinesis</option>
+                    <option value="Clarividencia">Clarividencia</option>
+                    <option value="Regeneración">Regeneración</option>
+                    <option value="Mimetismo">Mimetismo</option>
+                </select>
+
+                <button type="button" class="prev-btn" data-prev="step-3">Atrás</button>
+                <button type="button" class="submit-btn">Finalizar</button>
+            </section>
+        </form>
     </main>
 
     <footer>
         <div class="container footer-container">
-            <p class="footer-copy">&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
+            <p>&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
         </div>
     </footer>
 

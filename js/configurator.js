@@ -1,76 +1,153 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const pointsLeft = document.getElementById("points-left");
-    const statInputs = document.querySelectorAll(".stat-controls input");
-    const form = document.getElementById("character-form");
-    const summarySection = document.getElementById("character-summary");
-    const summaryDetails = document.getElementById("character-details");
-
+    const steps = document.querySelectorAll(".form-step");
+    const nextBtns = document.querySelectorAll(".next-btn");
+    const prevBtns = document.querySelectorAll(".prev-btn");
+    const submitBtn = document.querySelector(".submit-btn");
+    const attributesInputs = document.querySelectorAll("#attributes input[type='number']");
+    const remainingPointsElement = document.getElementById("remaining-points").querySelector("span");
+    const skillsCheckboxes = document.querySelectorAll("#skills input[type='checkbox']");
     const maxPoints = 40;
-    let pointsRemaining = maxPoints;
+    let remainingPoints = maxPoints;
 
-    const skills = ["Atletismo", "Sigilo", "Primeros Auxilios", "Tecnología", "Conocimiento", "Persuasión"];
-    const skillsContainer = document.getElementById("skills-container");
+    nextBtns.forEach(button => {
+        button.addEventListener("click", () => {
+            const currentStep = button.closest(".form-step");
+            const nextStepId = button.getAttribute("data-next");
+            const nextStep = document.getElementById(nextStepId);
 
-    // Render skills dynamically
-    skills.forEach(skill => {
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.name = "skills";
-        checkbox.value = skill;
-        checkbox.id = skill;
-
-        const label = document.createElement("label");
-        label.htmlFor = skill;
-        label.textContent = skill;
-
-        const wrapper = document.createElement("div");
-        wrapper.appendChild(checkbox);
-        wrapper.appendChild(label);
-
-        skillsContainer.appendChild(wrapper);
-    });
-
-    // Update points remaining dynamically
-    statInputs.forEach(input => {
-        input.addEventListener("input", () => {
-            const totalPoints = Array.from(statInputs).reduce((sum, input) => sum + parseInt(input.value || 0), 0);
-            pointsRemaining = maxPoints - totalPoints;
-            pointsLeft.textContent = pointsRemaining;
-
-            if (pointsRemaining < 0) {
-                input.value = parseInt(input.value) - 1;
-                alert("No puedes asignar más de 40 puntos.");
+            if (validateStep(currentStep)) {
+                currentStep.classList.add("hidden");
+                nextStep.classList.remove("hidden");
             }
         });
     });
 
-    // Handle form submission
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    prevBtns.forEach(button => {
+        button.addEventListener("click", () => {
+            const currentStep = button.closest(".form-step");
+            const prevStepId = button.getAttribute("data-prev");
+            const prevStep = document.getElementById(prevStepId);
 
-        const formData = new FormData(form);
-        const name = formData.get("name");
-        const charClass = formData.get("class");
-        const origin = formData.get("origin");
-        const selectedSkills = formData.getAll("skills").join(", ");
+            currentStep.classList.add("hidden");
+            prevStep.classList.remove("hidden");
+        });
+    });
 
-        const stats = {};
-        statInputs.forEach(input => {
-            stats[input.name] = input.value;
+    attributesInputs.forEach(input => {
+        const decrementBtn = input.previousElementSibling;
+        const incrementBtn = input.nextElementSibling;
+
+        decrementBtn.addEventListener("click", () => {
+            if (parseInt(input.value) > 0) {
+                input.value = parseInt(input.value) - 1;
+                updatePoints();
+            }
         });
 
-        summaryDetails.innerHTML = `
-            <p><strong>Nombre:</strong> ${name}</p>
-            <p><strong>Clase:</strong> ${charClass}</p>
-            <p><strong>Origen:</strong> ${origin}</p>
-            <p><strong>Habilidades Destacadas:</strong> ${selectedSkills}</p>
-            <p><strong>Atributos:</strong></p>
-            <ul>
-                ${Object.entries(stats).map(([key, value]) => `<li>${key}: ${value}</li>`).join("")}
-            </ul>
-        `;
+        incrementBtn.addEventListener("click", () => {
+            if (remainingPoints > 0) {
+                input.value = parseInt(input.value) + 1;
+                updatePoints();
+            }
+        });
 
-        form.classList.add("hidden");
-        summarySection.classList.remove("hidden");
+        input.addEventListener("input", updatePoints);
     });
+
+    function updatePoints() {
+        const totalPoints = Array.from(attributesInputs).reduce((sum, attrInput) => sum + parseInt(attrInput.value || 0), 0);
+        remainingPoints = maxPoints - totalPoints;
+
+        if (remainingPoints >= 0) {
+            remainingPointsElement.textContent = remainingPoints;
+            attributesInputs.forEach(input => input.classList.remove("error"));
+        } else {
+            attributesInputs.forEach(input => input.classList.add("error"));
+        }
+    }
+
+    skillsCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", () => {
+            const selectedSkills = Array.from(skillsCheckboxes).filter(skill => skill.checked);
+            if (selectedSkills.length > 3) {
+                checkbox.checked = false;
+                alert("You can only select up to 3 skills.");
+            }
+        });
+    });
+
+    function validateStep(step) {
+        const inputs = step.querySelectorAll("input, select, textarea");
+        let valid = true;
+
+        inputs.forEach(input => {
+            if (!input.checkValidity() || (input.type === "number" && parseInt(input.value) < 1)) {
+                valid = false;
+                input.classList.add("error");
+            } else {
+                input.classList.remove("error");
+            }
+        });
+
+        if (step.id === "step-2" && remainingPoints !== 0) {
+            alert("You must assign exactly 40 points between the attributes.");
+            valid = false;
+        }
+
+        return valid;
+    }
+
+    submitBtn.addEventListener("click", () => {
+        const characterData = collectCharacterData();
+        if (characterData) {
+            console.log("Character Created:", characterData);
+            alert("Character created successfully!");
+
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(characterData, null, 2));
+            const downloadAnchor = document.createElement("a");
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", `${characterData.name.replace(/\s+/g, "_").toLowerCase()}_character.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        }
+    });
+
+    function collectCharacterData() {
+        try {
+            const name = document.getElementById("name").value;
+            const charClass = document.getElementById("class").value;
+            const origin = document.getElementById("origin").value;
+            const appearance = document.getElementById("appearance").value;
+            const power = document.getElementById("power").value;
+
+            const attributes = {};
+            attributesInputs.forEach(input => {
+                attributes[input.name] = parseInt(input.value);
+            });
+
+            const skills = Array.from(skillsCheckboxes)
+                .filter(skill => skill.checked)
+                .map(skill => skill.value);
+
+            if (!name || !charClass || !origin || !power) {
+                alert("Please complete all required fields.");
+                return null;
+            }
+
+            return {
+                name,
+                class: charClass,
+                origin,
+                appearance,
+                power,
+                attributes,
+                skills,
+                timestamp: new Date().toISOString(),
+            };
+        } catch (error) {
+            console.error("Error collecting character data:", error);
+            return null;
+        }
+    }
 });
