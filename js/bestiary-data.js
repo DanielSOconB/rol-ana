@@ -15,7 +15,12 @@ const creatures = [
             "charisma": 10,
             "willpower": 14
         },
-        "skills": ["Sigilo experto", "Ataque crítico", "Manipulación psicológica"]
+        "skills": [
+            { "name": "Ataque Sigiloso", "description": "Incrementa el daño crítico cuando Jack ataca desde las sombras." },
+            { "name": "Evasión", "description": "Reduce las probabilidades de ser detectado." },
+            { "name": "Rastreo de Presa", "description": "Identifica y localiza enemigos cercanos." }
+        ],
+        "weakness": "Exposición a la luz brillante y ser confrontado directamente."
     },
     {
         "name": "Baba Yaga",
@@ -33,7 +38,12 @@ const creatures = [
             "charisma": 12,
             "willpower": 16
         },
-        "skills": ["Control de sombras", "Clarividencia", "Creación de ilusiones"]
+        "skills": [
+            { "name": "Maleficio", "description": "Reduce la resistencia de un enemigo durante 3 turnos." },
+            { "name": "Conjuro de Oscuridad", "description": "Crea un área de penumbra que oculta su posición." },
+            { "name": "Invocación de Espíritus", "description": "Trae aliados espirituales al combate." }
+        ],
+        "weakness": "Rituales de purificación o magia sagrada."
     },
     {
         "name": "El Hombre del Saco",
@@ -51,7 +61,12 @@ const creatures = [
             "charisma": 6,
             "willpower": 12
         },
-        "skills": ["Amenaza física", "Absorción de energía vital", "Detección de miedo"]
+        "skills": [
+            { "name": "Captura Rápida", "description": "Secuestra a un objetivo, dejándolo incapacitado por 2 turnos." },
+            { "name": "Aparición Sorprendente", "description": "Aumenta el pánico de los enemigos cercanos." },
+            { "name": "Saco de Sombras", "description": "Absorbe daño menor con su saco mágico." }
+        ],
+        "weakness": "Es vulnerable a ataques de fuego."
     },
     {
         "name": "María Sangrienta",
@@ -69,7 +84,12 @@ const creatures = [
             "charisma": 8,
             "willpower": 18
         },
-        "skills": ["Ataque mental", "Invocación de oscuridad", "Aparición espectral"]
+        "skills": [
+            { "name": "Espejo Mortal", "description": "Atrapa a los enemigos en un reflejo ilusorio." },
+            { "name": "Grito de Venganza", "description": "Daña mentalmente a todos los enemigos cercanos." },
+            { "name": "Sombras Perpetuas", "description": "Reduce la visibilidad en la habitación." }
+        ],
+        "weakness": "Los espejos rotos disipan su forma física."
     },
     {
         "name": "La Llorona",
@@ -87,7 +107,12 @@ const creatures = [
             "charisma": 14,
             "willpower": 16
         },
-        "skills": ["Lamento desgarrador", "Atracción hipnótica", "Manipulación emocional"]
+        "skills": [
+            { "name": "Lamento Doloroso", "description": "Causa miedo en un área amplia." },
+            { "name": "Toque Helado", "description": "Drena energía de los enemigos cercanos." },
+            { "name": "Aparición Fantasmal", "description": "Se teletransporta a cortas distancias." }
+        ],
+        "weakness": "No puede cruzar corrientes de agua bendita."
     },
     {
         "name": "El Charro Negro",
@@ -105,7 +130,12 @@ const creatures = [
             "charisma": 16,
             "willpower": 18
         },
-        "skills": ["Persuasión infernal", "Riquezas ilusorias", "Velocidad sobrenatural"]
+        "skills": [
+            { "name": "Persuasión Infernal", "description": "Engaña a los viajeros ofreciéndoles riquezas a cambio de sus almas." },
+            { "name": "Riquezas Ilusorias", "description": "Crea tesoros falsos para distraer a sus enemigos." },
+            { "name": "Velocidad Sobrenatural", "description": "Desaparece y reaparece rápidamente durante el combate." }
+        ],
+        "weakness": "No puede entrar en lugares consagrados o protegidos con símbolos religiosos."
     },
     {
         "name": "El Jinete Sin Cabeza",
@@ -123,7 +153,12 @@ const creatures = [
             "charisma": 8,
             "willpower": 16
         },
-        "skills": ["Ataque decapitador", "Aparición montada", "Rastreo sobrenatural"]
+        "skills": [
+            { "name": "Ataque Decapitador", "description": "Lanza ataques feroces que tienen una alta probabilidad de causar daño crítico." },
+            { "name": "Aparición Montada", "description": "Puede materializarse repentinamente en el combate, causando pánico en los enemigos." },
+            { "name": "Rastreo Sobrenatural", "description": "Localiza enemigos sin importar su escondite." }
+        ],
+        "weakness": "Si recupera su cabeza, pierde su motivación y se desvanece."
     },
     {
         "name": "La Dama de Blanco",
@@ -141,6 +176,34 @@ const creatures = [
             "charisma": 12,
             "willpower": 16
         },
-        "skills": ["Presencia etérea", "Manipulación emocional", "Desaparición rápida"]
-    }
+        "skills": [
+            { "name": "Presencia Etérea", "description": "Se mueve entre los enemigos como un espectro, esquivando ataques." },
+            { "name": "Manipulación Emocional", "description": "Provoca desesperación y tristeza en los enemigos, reduciendo su moral." },
+            { "name": "Desaparición Rápida", "description": "Desaparece de la vista, dificultando ser atacada." }
+        ],
+        "weakness": "Es vulnerable a objetos personales de su vida pasada, como anillos o cartas."
+    },
+    {
+        "name": "Ded Moroz",
+        "type": "Entidad Sobrenatural",
+        "origin": "Mito Eslavo",
+        "age": "Indeterminado",
+        "image": "img/ded-moroz.webp",
+        "story": "Una figura antigua de la mitología eslava que alguna vez fue un benefactor del invierno. Ahora corrompido por el deseo de poder, busca extender su imperio de hielo a nuevas tierras.",
+        "appearance": "Un hombre alto, imponente, con barba blanca congelada, ropajes azules decorados con estrellas de hielo y un cetro brillante.",
+        "stats": {
+            "strength": 14,        // Antes: 18
+            "agility": 10,         // Antes: 12
+            "endurance": 16,       // Antes: 20
+            "intelligence": 14,    // Antes: 16
+            "charisma": 12,        // Antes: 14
+            "willpower": 16        // Antes: 18
+        },
+        "skills": [
+            { "name": "Congelación Instantánea", "description": "Ded Moroz congela a un enemigo inmovilizándolo por 2 turnos." },
+            { "name": "Tormenta de Nieve", "description": "Invoca un área de hielo que reduce la visibilidad y la movilidad." },
+            { "name": "Sello de Hielo", "description": "Lanza un hechizo para bloquear entradas o salidas con muros de hielo." }
+        ],
+        "weakness": "El calor de las campanadas y la luz simbolizan su derrota."
+    }    
 ];
